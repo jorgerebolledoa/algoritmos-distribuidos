@@ -4,7 +4,7 @@
 #include <pthread.h>
 #include <string.h>
 
-bool isConnectedGlobal = true;
+int isConnectedGlobal = 1 ;
 int numThreads;
 char mode;
 
@@ -125,7 +125,7 @@ bool isStronglyConnected(int **graph, int n) {
         // Verificar si algún nodo no se alcanzó
         for (int j = 0; j < n; j++) {
             if (!visited[j]) {
-                isConnectedGlobal = false;
+                isConnectedGlobal = 0;
                                 
                 if (mode == 'V') {
                     printf("Hilo %d detectó que el nodo %d no es alcanzable. Deteniendo otros hilos.\n", data->threadId, j);
@@ -134,7 +134,7 @@ bool isStronglyConnected(int **graph, int n) {
                 free(data);
                 free(threads);
                 free(visited);
-                return false;
+                return 0;
             }
         }
         free(data);
@@ -166,7 +166,6 @@ int main(int argc, char *argv[]) {
         graph[i] = (int *)calloc(n, sizeof(int));
     }
 
-
     for (int i = 0; i < n; i++) {
         for (int j = 0; j < n; j++) {
             if (scanf("%d", &graph[i][j]) != 1) {
@@ -176,7 +175,6 @@ int main(int argc, char *argv[]) {
         }
     }
     
-
     if (mode == 'V') {
         printf("Iniciando verificación de conexidad con %d hilos\n", numThreads);
     }
