@@ -5,7 +5,6 @@
 #include <string.h>
 
 bool isConnectedGlobal = true;
-pthread_mutex_t lock;
 int numThreads;
 char mode;
 
@@ -126,10 +125,8 @@ bool isStronglyConnected(int **graph, int n) {
         // Verificar si algún nodo no se alcanzó
         for (int j = 0; j < n; j++) {
             if (!visited[j]) {
-                pthread_mutex_lock(&lock);
                 isConnectedGlobal = false;
-                pthread_mutex_unlock(&lock);
-                
+                                
                 if (mode == 'V') {
                     printf("Hilo %d detectó que el nodo %d no es alcanzable. Deteniendo otros hilos.\n", data->threadId, j);
                 }
@@ -178,7 +175,7 @@ int main(int argc, char *argv[]) {
         }
     }
 
-    pthread_mutex_init(&lock, NULL);
+    
 
     if (mode == 'V') {
         printf("Iniciando verificación de conexidad con %d hilos\n", numThreads);
@@ -200,7 +197,7 @@ int main(int argc, char *argv[]) {
     }
     free(graph);
 
-    pthread_mutex_destroy(&lock);
+    
 
     return 0;
 }
