@@ -15,6 +15,15 @@ typedef struct {
     int top;
     int *data;
 } Stack;
+// Estructura para pasar múltiples argumentos a la función de DFS
+typedef struct {
+    int **graph;
+    int n;
+    int start;
+    int end;
+    bool *visited;
+    int threadId;
+} ThreadData;
 
 Stack *createStack(int maxSize) {
     Stack *stack = (Stack *)calloc(1, sizeof(Stack));
@@ -38,15 +47,7 @@ void freeStack(Stack *stack) {
     free(stack);
 }
 
-// Estructura para pasar múltiples argumentos a la función de DFS
-typedef struct {
-    int **graph;
-    int n;
-    int start;
-    int end;
-    bool *visited;
-    int threadId;
-} ThreadData;
+
 
 // Función DFS paralelizada con control de parada temprana
 void* DFS(void* arg) {
