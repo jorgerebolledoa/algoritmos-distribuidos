@@ -166,6 +166,15 @@ int main(int argc, char *argv[]) {
         graph[i] = (int *)calloc(n, sizeof(int));
     }
 
+
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++) {
+            if (scanf("%d", &graph[i][j]) != 1) {
+                printf("Error al leer el grafo.\n");
+                return 1;
+            }
+        }
+    }
     
 
     if (mode == 'V') {
