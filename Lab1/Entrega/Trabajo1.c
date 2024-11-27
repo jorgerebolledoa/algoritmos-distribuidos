@@ -59,11 +59,11 @@ void* DFS(void* arg) {
         printf("Hilo %d iniciando verificación desde nodo %d hasta %d\n", data->threadId, data->start, data->end - 1);
     }
 
-    for (int v = data->start; v < data->end && isConnectedGlobal; v++) {
+    for (int v = data->start; v < data->end && isConnectedGlobal==1; v++) {
         Stack *stack = createStack(n);
         push(stack, v);
 
-        while (stack->top != -1 && isConnectedGlobal) {
+        while (stack->top != -1 && isConnectedGlobal==1) {
             int vertex = pop(stack);
             if (!visited[vertex]) {
                 visited[vertex] = true;
@@ -179,7 +179,7 @@ int main(int argc, char *argv[]) {
         printf("Iniciando verificación de conexidad con %d hilos\n", numThreads);
     }
 
-    if (isStronglyConnected(graph, n) && isConnectedGlobal) {
+    if (isStronglyConnected(graph, n) && isConnectedGlobal==1) {
         printf("El grafo es fuertemente conectado.\n");
     } else {
         printf("El grafo NO es fuertemente conectado.\n");
