@@ -1,10 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <stdbool.h>
 #include <pthread.h>
 #include <string.h>
 
-int isConnectedGlobal = 1 ;
+unsigned int isConnectedGlobal;
 int numThreads;
 char mode;
 
@@ -14,13 +13,14 @@ typedef struct {
     int top;
     int *data;
 } Stack;
+
 // Estructura para pasar múltiples argumentos a la función de DFS
 typedef struct {
     int **graph;
     int n;
     int start;
     int end;
-    bool *visited;
+    int *visited;
     int threadId;
 } ThreadData;
 
@@ -46,14 +46,12 @@ void freeStack(Stack *stack) {
     free(stack);
 }
 
-
-
 // Función DFS paralelizada con control de parada temprana
 void* DFS(void* arg) {
     ThreadData* data = (ThreadData*)arg;
     int **graph = data->graph;
     int n = data->n;
-    bool* visited = data->visited;
+    int* visited = data->visited;
 
     if (mode == 'V') {
         printf("Hilo %d iniciando verificación desde nodo %d hasta %d\n", data->threadId, data->start, data->end - 1);
@@ -65,15 +63,15 @@ void* DFS(void* arg) {
 
         while (stack->top != -1 && isConnectedGlobal==1) {
             int vertex = pop(stack);
-            if (!visited[vertex]) {
-                visited[vertex] = true;
+            if (!visited[vertex]==1) {
+                visited[vertex] = 1;
 
                 if (mode == 'V') {
                     printf("Hilo %d visitando nodo %d\n", data->threadId, vertex);
                 }
 
                 for (int i = 0; i < n; i++) {
-                    if (graph[vertex][i] && !visited[i]) {
+                    if (graph[vertex][i] && !visited[i]==1) {
                         push(stack, i);
                         if (mode == 'V') {
                             printf("Hilo %d: Nodo %d conectado a nodo %d, añadiendo a la pila\n", data->threadId, vertex, i);
@@ -93,9 +91,10 @@ void* DFS(void* arg) {
 }
 
 // Función para verificar si un grafo es fuertemente conectado
-bool isStronglyConnected(int **graph, int n) {
+int isStronglyConnected(int **graph, int n) {
+    isConnectedGlobal = 1;
     pthread_t *threads = calloc(numThreads, sizeof(pthread_t));
-    bool *visited = calloc(n, sizeof(bool));
+    int *visited = calloc(n, sizeof(int));
 
     if (numThreads > n) numThreads = n;
     int verticesPerThread = n / numThreads;
@@ -105,7 +104,7 @@ bool isStronglyConnected(int **graph, int n) {
         int start = i * verticesPerThread;
         int end = (i == numThreads - 1) ? (start + verticesPerThread + remainder) : (start + verticesPerThread);
 
-        memset(visited, false, n * sizeof(bool));
+        memset(visited, 0, n * sizeof(int));
 
         ThreadData *data = malloc(sizeof(ThreadData));
         data->graph = graph;
@@ -124,25 +123,22 @@ bool isStronglyConnected(int **graph, int n) {
 
         // Verificar si algún nodo no se alcanzó
         for (int j = 0; j < n; j++) {
-            if (!visited[j]) {
-                isConnectedGlobal = 0;
-                                
+            if (visited[j] != 1) {
+               isConnectedGlobal = 0;                
                 if (mode == 'V') {
                     printf("Hilo %d detectó que el nodo %d no es alcanzable. Deteniendo otros hilos.\n", data->threadId, j);
                 }
-                
-                free(data);
-                free(threads);
-                free(visited);
                 return 0;
             }
+            
         }
-        free(data);
+
+       free(data);
     }
 
     free(threads);
     free(visited);
-    return true;
+    return 1;
 }
 
 int main(int argc, char *argv[]) {
@@ -150,17 +146,12 @@ int main(int argc, char *argv[]) {
         printf("Uso: %s <k> -O <modo> < data.txt\n", argv[0]);
         return 1;
     }
-
     numThreads = atoi(argv[1]);
-    mode = argv[2][1];  // Toma el modo de la opción -O
-
-    int n;
-    if (scanf("%d", &n) != 1) {
-        printf("Error al leer el número de vértices.\n");
-        return 1;
-    }
-
+    mode = argv[2][1]; 
+    
     // Asignación dinámica para el grafo
+    unsigned int n;
+    scanf("%d", &n);
     int **graph = (int **)calloc(n, sizeof(int *));
     for (int i = 0; i < n; i++) {
         graph[i] = (int *)calloc(n, sizeof(int));
@@ -168,11 +159,17 @@ int main(int argc, char *argv[]) {
 
     for (int i = 0; i < n; i++) {
         for (int j = 0; j < n; j++) {
-            if (scanf("%d", &graph[i][j]) != 1) {
-                printf("Error al leer el grafo.\n");
-                return 1;
-            }
+            scanf("%d", &graph[i][j]);
         }
+    }
+     if (mode == 'V') {
+    printf("El grafo ingresado es:\n");
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++) {
+            printf("%d ", graph[i][j]);
+        }
+        printf("\n");
+    }
     }
     
     if (mode == 'V') {
@@ -180,8 +177,11 @@ int main(int argc, char *argv[]) {
     }
 
     if (isStronglyConnected(graph, n) && isConnectedGlobal==1) {
+        printf("%d", isConnectedGlobal);
         printf("El grafo es fuertemente conectado.\n");
     } else {
+                printf("%d", isConnectedGlobal);
+
         printf("El grafo NO es fuertemente conectado.\n");
     }
 

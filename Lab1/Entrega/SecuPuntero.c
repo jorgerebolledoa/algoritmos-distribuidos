@@ -49,6 +49,7 @@ void DFS(int graph[MAX][MAX], int n, int v, bool *visited) {
 
             for (int i = 0; i < n; i++) {
                 if (graph[vertex][i] && !visited[i]) {
+                    printf ("Nodo %d conectado a nodo %d, añadiendo a la pila %d \n ", vertex, i, visited[i]);
                     push(stack, i);
                 }
             }
