@@ -1,0 +1,1471 @@
+El grafo ingresado es:
+0 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 1 1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 1 1 1 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 1 0 0 1 1 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 1 0 0 0 
+1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 
+1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 
+0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 
+0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 1 0 0 0 1 1 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 
+Iniciando verificación de conexidad con 4 hilos
+Creando hilo 1 para verificar nodos desde 0 hasta 4
+Hilo 1 iniciando verificación desde nodo 0 hasta 4
+v es 0 
+Hilo 1: Estado actual de la pila: 0 
+vertex es 0 
+Hilo 1 visitando nodo 0
+Hilo 1: Estado actual de la pila: 1 
+visited[1] es 0 
+Hilo 1: Nodo 0 conectado a nodo 1, añadiendo a la pila
+Hilo 1: Estado actual de la pila: 1 2 
+visited[2] es 0 
+Hilo 1: Nodo 0 conectado a nodo 2, añadiendo a la pila
+Hilo 1: Estado actual de la pila: 1 2 3 
+visited[3] es 0 
+Hilo 1: Nodo 0 conectado a nodo 3, añadiendo a la pila
+vertex es 3 
+Hilo 1 visitando nodo 3
+Hilo 1: Estado actual de la pila: 1 2 4 
+visited[4] es 0 
+Hilo 1: Nodo 3 conectado a nodo 4, añadiendo a la pila
+Hilo 1: Estado actual de la pila: 1 2 4 5 
+visited[5] es 0 
+Hilo 1: Nodo 3 conectado a nodo 5, añadiendo a la pila
+Hilo 1: Estado actual de la pila: 1 2 4 5 7 
+visited[7] es 0 
+Hilo 1: Nodo 3 conectado a nodo 7, añadiendo a la pila
+vertex es 7 
+Hilo 1 visitando nodo 7
+Hilo 1: Estado actual de la pila: 1 2 4 5 9 
+visited[9] es 0 
+Hilo 1: Nodo 7 conectado a nodo 9, añadiendo a la pila
+Hilo 1: Estado actual de la pila: 1 2 4 5 9 12 
+visited[12] es 0 
+Hilo 1: Nodo 7 conectado a nodo 12, añadiendo a la pila
+Hilo 1: Estado actual de la pila: 1 2 4 5 9 12 13 
+visited[13] es 0 
+Hilo 1: Nodo 7 conectado a nodo 13, añadiendo a la pila
+vertex es 13 
+Hilo 1 visitando nodo 13
+Hilo 1: Estado actual de la pila: 1 2 4 5 9 12 14 
+visited[14] es 0 
+Hilo 1: Nodo 13 conectado a nodo 14, añadiendo a la pila
+vertex es 14 
+Hilo 1 visitando nodo 14
+Hilo 1: Estado actual de la pila: 1 2 4 5 9 12 18 
+visited[18] es 0 
+Hilo 1: Nodo 14 conectado a nodo 18, añadiendo a la pila
+vertex es 18 
+Hilo 1 visitando nodo 18
+vertex es 12 
+Hilo 1 visitando nodo 12
+Hilo 1: Estado actual de la pila: 1 2 4 5 9 16 
+visited[16] es 0 
+Hilo 1: Nodo 12 conectado a nodo 16, añadiendo a la pila
+vertex es 16 
+Hilo 1 visitando nodo 16
+Hilo 1: Estado actual de la pila: 1 2 4 5 9 20 
+visited[20] es 0 
+Hilo 1: Nodo 16 conectado a nodo 20, añadiendo a la pila
+vertex es 20 
+Hilo 1 visitando nodo 20
+vertex es 9 
+Hilo 1 visitando nodo 9
+vertex es 5 
+Hilo 1 visitando nodo 5
+Hilo 1: Estado actual de la pila: 1 2 4 10 
+visited[10] es 0 
+Hilo 1: Nodo 5 conectado a nodo 10, añadiendo a la pila
+vertex es 10 
+Hilo 1 visitando nodo 10
+Hilo 1: Estado actual de la pila: 1 2 4 2 
+visited[2] es 0 
+Hilo 1: Nodo 10 conectado a nodo 2, añadiendo a la pila
+vertex es 2 
+Hilo 1 visitando nodo 2
+Hilo 1: Estado actual de la pila: 1 2 4 6 
+visited[6] es 0 
+Hilo 1: Nodo 2 conectado a nodo 6, añadiendo a la pila
+vertex es 6 
+Hilo 1 visitando nodo 6
+Hilo 1: Estado actual de la pila: 1 2 4 11 
+visited[11] es 0 
+Hilo 1: Nodo 6 conectado a nodo 11, añadiendo a la pila
+vertex es 11 
+Hilo 1 visitando nodo 11
+Hilo 1: Estado actual de la pila: 1 2 4 17 
+visited[17] es 0 
+Hilo 1: Nodo 11 conectado a nodo 17, añadiendo a la pila
+vertex es 17 
+Hilo 1 visitando nodo 17
+vertex es 4 
+Hilo 1 visitando nodo 4
+Hilo 1: Estado actual de la pila: 1 2 8 
+visited[8] es 0 
+Hilo 1: Nodo 4 conectado a nodo 8, añadiendo a la pila
+vertex es 8 
+Hilo 1 visitando nodo 8
+Hilo 1: Estado actual de la pila: 1 2 15 
+visited[15] es 0 
+Hilo 1: Nodo 8 conectado a nodo 15, añadiendo a la pila
+vertex es 15 
+Hilo 1 visitando nodo 15
+Hilo 1: Estado actual de la pila: 1 2 19 
+visited[19] es 0 
+Hilo 1: Nodo 15 conectado a nodo 19, añadiendo a la pila
+vertex es 19 
+Hilo 1 visitando nodo 19
+vertex es 2 
+vertex es 1 
+Hilo 1 visitando nodo 1
+visited[0] es 1 
+Hilo 1 completó la verificación de su rango de nodos.
+visited[1] es 1 
+Hilo 1 completó la verificación de su rango de nodos.
+visited[2] es 1 
+Hilo 1 completó la verificación de su rango de nodos.
+visited[3] es 1 
+Hilo 1 completó la verificación de su rango de nodos.
+visited[4] es 1 
+Hilo 1 completó la verificación de su rango de nodos.
+visited[5] es 1 
+Hilo 1 completó la verificación de su rango de nodos.
+visited[6] es 1 
+Hilo 1 completó la verificación de su rango de nodos.
+visited[7] es 1 
+Hilo 1 completó la verificación de su rango de nodos.
+visited[8] es 1 
+Hilo 1 completó la verificación de su rango de nodos.
+visited[9] es 1 
+Hilo 1 completó la verificación de su rango de nodos.
+visited[10] es 1 
+Hilo 1 completó la verificación de su rango de nodos.
+visited[11] es 1 
+Hilo 1 completó la verificación de su rango de nodos.
+visited[12] es 1 
+Hilo 1 completó la verificación de su rango de nodos.
+visited[13] es 1 
+Hilo 1 completó la verificación de su rango de nodos.
+visited[14] es 1 
+Hilo 1 completó la verificación de su rango de nodos.
+visited[15] es 1 
+Hilo 1 completó la verificación de su rango de nodos.
+visited[16] es 1 
+Hilo 1 completó la verificación de su rango de nodos.
+visited[17] es 1 
+Hilo 1 completó la verificación de su rango de nodos.
+visited[18] es 1 
+Hilo 1 completó la verificación de su rango de nodos.
+visited[19] es 1 
+Hilo 1 completó la verificación de su rango de nodos.
+visited[20] es 1 
+Hilo 1 completó la verificación de su rango de nodos.
+Stack libre 
+v es 1 
+Hilo 1: Estado actual de la pila: 1 
+vertex es 1 
+visited[0] es 1 
+Hilo 1 completó la verificación de su rango de nodos.
+visited[1] es 1 
+Hilo 1 completó la verificación de su rango de nodos.
+visited[2] es 1 
+Hilo 1 completó la verificación de su rango de nodos.
+visited[3] es 1 
+Hilo 1 completó la verificación de su rango de nodos.
+visited[4] es 1 
+Hilo 1 completó la verificación de su rango de nodos.
+visited[5] es 1 
+Hilo 1 completó la verificación de su rango de nodos.
+visited[6] es 1 
+Hilo 1 completó la verificación de su rango de nodos.
+visited[7] es 1 
+Hilo 1 completó la verificación de su rango de nodos.
+visited[8] es 1 
+Hilo 1 completó la verificación de su rango de nodos.
+visited[9] es 1 
+Hilo 1 completó la verificación de su rango de nodos.
+visited[10] es 1 
+Hilo 1 completó la verificación de su rango de nodos.
+visited[11] es 1 
+Hilo 1 completó la verificación de su rango de nodos.
+visited[12] es 1 
+Hilo 1 completó la verificación de su rango de nodos.
+visited[13] es 1 
+Hilo 1 completó la verificación de su rango de nodos.
+visited[14] es 1 
+Hilo 1 completó la verificación de su rango de nodos.
+visited[15] es 1 
+Hilo 1 completó la verificación de su rango de nodos.
+visited[16] es 1 
+Hilo 1 completó la verificación de su rango de nodos.
+visited[17] es 1 
+Hilo 1 completó la verificación de su rango de nodos.
+visited[18] es 1 
+Hilo 1 completó la verificación de su rango de nodos.
+visited[19] es 1 
+Hilo 1 completó la verificación de su rango de nodos.
+visited[20] es 1 
+Hilo 1 completó la verificación de su rango de nodos.
+Stack libre 
+v es 2 
+Hilo 1: Estado actual de la pila: 2 
+vertex es 2 
+visited[0] es 1 
+Hilo 1 completó la verificación de su rango de nodos.
+visited[1] es 1 
+Hilo 1 completó la verificación de su rango de nodos.
+visited[2] es 1 
+Hilo 1 completó la verificación de su rango de nodos.
+visited[3] es 1 
+Hilo 1 completó la verificación de su rango de nodos.
+visited[4] es 1 
+Hilo 1 completó la verificación de su rango de nodos.
+visited[5] es 1 
+Hilo 1 completó la verificación de su rango de nodos.
+visited[6] es 1 
+Hilo 1 completó la verificación de su rango de nodos.
+visited[7] es 1 
+Hilo 1 completó la verificación de su rango de nodos.
+visited[8] es 1 
+Hilo 1 completó la verificación de su rango de nodos.
+visited[9] es 1 
+Hilo 1 completó la verificación de su rango de nodos.
+visited[10] es 1 
+Hilo 1 completó la verificación de su rango de nodos.
+visited[11] es 1 
+Hilo 1 completó la verificación de su rango de nodos.
+visited[12] es 1 
+Hilo 1 completó la verificación de su rango de nodos.
+visited[13] es 1 
+Hilo 1 completó la verificación de su rango de nodos.
+visited[14] es 1 
+Hilo 1 completó la verificación de su rango de nodos.
+visited[15] es 1 
+Hilo 1 completó la verificación de su rango de nodos.
+visited[16] es 1 
+Hilo 1 completó la verificación de su rango de nodos.
+visited[17] es 1 
+Hilo 1 completó la verificación de su rango de nodos.
+visited[18] es 1 
+Hilo 1 completó la verificación de su rango de nodos.
+visited[19] es 1 
+Hilo 1 completó la verificación de su rango de nodos.
+visited[20] es 1 
+Hilo 1 completó la verificación de su rango de nodos.
+Stack libre 
+v es 3 
+Hilo 1: Estado actual de la pila: 3 
+vertex es 3 
+visited[0] es 1 
+Hilo 1 completó la verificación de su rango de nodos.
+visited[1] es 1 
+Hilo 1 completó la verificación de su rango de nodos.
+visited[2] es 1 
+Hilo 1 completó la verificación de su rango de nodos.
+visited[3] es 1 
+Hilo 1 completó la verificación de su rango de nodos.
+visited[4] es 1 
+Hilo 1 completó la verificación de su rango de nodos.
+visited[5] es 1 
+Hilo 1 completó la verificación de su rango de nodos.
+visited[6] es 1 
+Hilo 1 completó la verificación de su rango de nodos.
+visited[7] es 1 
+Hilo 1 completó la verificación de su rango de nodos.
+visited[8] es 1 
+Hilo 1 completó la verificación de su rango de nodos.
+visited[9] es 1 
+Hilo 1 completó la verificación de su rango de nodos.
+visited[10] es 1 
+Hilo 1 completó la verificación de su rango de nodos.
+visited[11] es 1 
+Hilo 1 completó la verificación de su rango de nodos.
+visited[12] es 1 
+Hilo 1 completó la verificación de su rango de nodos.
+visited[13] es 1 
+Hilo 1 completó la verificación de su rango de nodos.
+visited[14] es 1 
+Hilo 1 completó la verificación de su rango de nodos.
+visited[15] es 1 
+Hilo 1 completó la verificación de su rango de nodos.
+visited[16] es 1 
+Hilo 1 completó la verificación de su rango de nodos.
+visited[17] es 1 
+Hilo 1 completó la verificación de su rango de nodos.
+visited[18] es 1 
+Hilo 1 completó la verificación de su rango de nodos.
+visited[19] es 1 
+Hilo 1 completó la verificación de su rango de nodos.
+visited[20] es 1 
+Hilo 1 completó la verificación de su rango de nodos.
+Stack libre 
+v es 4 
+Hilo 1: Estado actual de la pila: 4 
+vertex es 4 
+visited[0] es 1 
+Hilo 1 completó la verificación de su rango de nodos.
+visited[1] es 1 
+Hilo 1 completó la verificación de su rango de nodos.
+visited[2] es 1 
+Hilo 1 completó la verificación de su rango de nodos.
+visited[3] es 1 
+Hilo 1 completó la verificación de su rango de nodos.
+visited[4] es 1 
+Hilo 1 completó la verificación de su rango de nodos.
+visited[5] es 1 
+Hilo 1 completó la verificación de su rango de nodos.
+visited[6] es 1 
+Hilo 1 completó la verificación de su rango de nodos.
+visited[7] es 1 
+Hilo 1 completó la verificación de su rango de nodos.
+visited[8] es 1 
+Hilo 1 completó la verificación de su rango de nodos.
+visited[9] es 1 
+Hilo 1 completó la verificación de su rango de nodos.
+visited[10] es 1 
+Hilo 1 completó la verificación de su rango de nodos.
+visited[11] es 1 
+Hilo 1 completó la verificación de su rango de nodos.
+visited[12] es 1 
+Hilo 1 completó la verificación de su rango de nodos.
+visited[13] es 1 
+Hilo 1 completó la verificación de su rango de nodos.
+visited[14] es 1 
+Hilo 1 completó la verificación de su rango de nodos.
+visited[15] es 1 
+Hilo 1 completó la verificación de su rango de nodos.
+visited[16] es 1 
+Hilo 1 completó la verificación de su rango de nodos.
+visited[17] es 1 
+Hilo 1 completó la verificación de su rango de nodos.
+visited[18] es 1 
+Hilo 1 completó la verificación de su rango de nodos.
+visited[19] es 1 
+Hilo 1 completó la verificación de su rango de nodos.
+visited[20] es 1 
+Hilo 1 completó la verificación de su rango de nodos.
+Stack libre 
+Hilo 1 completó la verificación de su rango de nodos.
+Creando hilo 2 para verificar nodos desde 5 hasta 9
+Hilo 2 iniciando verificación desde nodo 5 hasta 9
+v es 5 
+Hilo 2: Estado actual de la pila: 5 
+vertex es 5 
+Hilo 2 visitando nodo 5
+Hilo 2: Estado actual de la pila: 10 
+visited[10] es 0 
+Hilo 2: Nodo 5 conectado a nodo 10, añadiendo a la pila
+vertex es 10 
+Hilo 2 visitando nodo 10
+Hilo 2: Estado actual de la pila: 2 
+visited[2] es 0 
+Hilo 2: Nodo 10 conectado a nodo 2, añadiendo a la pila
+vertex es 2 
+Hilo 2 visitando nodo 2
+Hilo 2: Estado actual de la pila: 6 
+visited[6] es 0 
+Hilo 2: Nodo 2 conectado a nodo 6, añadiendo a la pila
+vertex es 6 
+Hilo 2 visitando nodo 6
+Hilo 2: Estado actual de la pila: 11 
+visited[11] es 0 
+Hilo 2: Nodo 6 conectado a nodo 11, añadiendo a la pila
+Hilo 2: Estado actual de la pila: 11 12 
+visited[12] es 0 
+Hilo 2: Nodo 6 conectado a nodo 12, añadiendo a la pila
+Hilo 2: Estado actual de la pila: 11 12 13 
+visited[13] es 0 
+Hilo 2: Nodo 6 conectado a nodo 13, añadiendo a la pila
+vertex es 13 
+Hilo 2 visitando nodo 13
+Hilo 2: Estado actual de la pila: 11 12 0 
+visited[0] es 0 
+Hilo 2: Nodo 13 conectado a nodo 0, añadiendo a la pila
+Hilo 2: Estado actual de la pila: 11 12 0 14 
+visited[14] es 0 
+Hilo 2: Nodo 13 conectado a nodo 14, añadiendo a la pila
+vertex es 14 
+Hilo 2 visitando nodo 14
+Hilo 2: Estado actual de la pila: 11 12 0 3 
+visited[3] es 0 
+Hilo 2: Nodo 14 conectado a nodo 3, añadiendo a la pila
+Hilo 2: Estado actual de la pila: 11 12 0 3 18 
+visited[18] es 0 
+Hilo 2: Nodo 14 conectado a nodo 18, añadiendo a la pila
+vertex es 18 
+Hilo 2 visitando nodo 18
+vertex es 3 
+Hilo 2 visitando nodo 3
+Hilo 2: Estado actual de la pila: 11 12 0 4 
+visited[4] es 0 
+Hilo 2: Nodo 3 conectado a nodo 4, añadiendo a la pila
+Hilo 2: Estado actual de la pila: 11 12 0 4 7 
+visited[7] es 0 
+Hilo 2: Nodo 3 conectado a nodo 7, añadiendo a la pila
+vertex es 7 
+Hilo 2 visitando nodo 7
+Hilo 2: Estado actual de la pila: 11 12 0 4 9 
+visited[9] es 0 
+Hilo 2: Nodo 7 conectado a nodo 9, añadiendo a la pila
+Hilo 2: Estado actual de la pila: 11 12 0 4 9 12 
+visited[12] es 0 
+Hilo 2: Nodo 7 conectado a nodo 12, añadiendo a la pila
+vertex es 12 
+Hilo 2 visitando nodo 12
+Hilo 2: Estado actual de la pila: 11 12 0 4 9 0 
+visited[0] es 0 
+Hilo 2: Nodo 12 conectado a nodo 0, añadiendo a la pila
+Hilo 2: Estado actual de la pila: 11 12 0 4 9 0 16 
+visited[16] es 0 
+Hilo 2: Nodo 12 conectado a nodo 16, añadiendo a la pila
+vertex es 16 
+Hilo 2 visitando nodo 16
+Hilo 2: Estado actual de la pila: 11 12 0 4 9 0 20 
+visited[20] es 0 
+Hilo 2: Nodo 16 conectado a nodo 20, añadiendo a la pila
+vertex es 20 
+Hilo 2 visitando nodo 20
+vertex es 0 
+Hilo 2 visitando nodo 0
+Hilo 2: Estado actual de la pila: 11 12 0 4 9 1 
+visited[1] es 0 
+Hilo 2: Nodo 0 conectado a nodo 1, añadiendo a la pila
+vertex es 1 
+Hilo 2 visitando nodo 1
+Hilo 2: Estado actual de la pila: 11 12 0 4 9 4 
+visited[4] es 0 
+Hilo 2: Nodo 1 conectado a nodo 4, añadiendo a la pila
+vertex es 4 
+Hilo 2 visitando nodo 4
+Hilo 2: Estado actual de la pila: 11 12 0 4 9 8 
+visited[8] es 0 
+Hilo 2: Nodo 4 conectado a nodo 8, añadiendo a la pila
+Hilo 2: Estado actual de la pila: 11 12 0 4 9 8 9 
+visited[9] es 0 
+Hilo 2: Nodo 4 conectado a nodo 9, añadiendo a la pila
+vertex es 9 
+Hilo 2 visitando nodo 9
+vertex es 8 
+Hilo 2 visitando nodo 8
+Hilo 2: Estado actual de la pila: 11 12 0 4 9 15 
+visited[15] es 0 
+Hilo 2: Nodo 8 conectado a nodo 15, añadiendo a la pila
+vertex es 15 
+Hilo 2 visitando nodo 15
+Hilo 2: Estado actual de la pila: 11 12 0 4 9 19 
+visited[19] es 0 
+Hilo 2: Nodo 15 conectado a nodo 19, añadiendo a la pila
+vertex es 19 
+Hilo 2 visitando nodo 19
+vertex es 9 
+vertex es 4 
+vertex es 0 
+vertex es 12 
+vertex es 11 
+Hilo 2 visitando nodo 11
+Hilo 2: Estado actual de la pila: 17 
+visited[17] es 0 
+Hilo 2: Nodo 11 conectado a nodo 17, añadiendo a la pila
+vertex es 17 
+Hilo 2 visitando nodo 17
+visited[0] es 1 
+Hilo 2 completó la verificación de su rango de nodos.
+visited[1] es 1 
+Hilo 2 completó la verificación de su rango de nodos.
+visited[2] es 1 
+Hilo 2 completó la verificación de su rango de nodos.
+visited[3] es 1 
+Hilo 2 completó la verificación de su rango de nodos.
+visited[4] es 1 
+Hilo 2 completó la verificación de su rango de nodos.
+visited[5] es 1 
+Hilo 2 completó la verificación de su rango de nodos.
+visited[6] es 1 
+Hilo 2 completó la verificación de su rango de nodos.
+visited[7] es 1 
+Hilo 2 completó la verificación de su rango de nodos.
+visited[8] es 1 
+Hilo 2 completó la verificación de su rango de nodos.
+visited[9] es 1 
+Hilo 2 completó la verificación de su rango de nodos.
+visited[10] es 1 
+Hilo 2 completó la verificación de su rango de nodos.
+visited[11] es 1 
+Hilo 2 completó la verificación de su rango de nodos.
+visited[12] es 1 
+Hilo 2 completó la verificación de su rango de nodos.
+visited[13] es 1 
+Hilo 2 completó la verificación de su rango de nodos.
+visited[14] es 1 
+Hilo 2 completó la verificación de su rango de nodos.
+visited[15] es 1 
+Hilo 2 completó la verificación de su rango de nodos.
+visited[16] es 1 
+Hilo 2 completó la verificación de su rango de nodos.
+visited[17] es 1 
+Hilo 2 completó la verificación de su rango de nodos.
+visited[18] es 1 
+Hilo 2 completó la verificación de su rango de nodos.
+visited[19] es 1 
+Hilo 2 completó la verificación de su rango de nodos.
+visited[20] es 1 
+Hilo 2 completó la verificación de su rango de nodos.
+Stack libre 
+v es 6 
+Hilo 2: Estado actual de la pila: 6 
+vertex es 6 
+visited[0] es 1 
+Hilo 2 completó la verificación de su rango de nodos.
+visited[1] es 1 
+Hilo 2 completó la verificación de su rango de nodos.
+visited[2] es 1 
+Hilo 2 completó la verificación de su rango de nodos.
+visited[3] es 1 
+Hilo 2 completó la verificación de su rango de nodos.
+visited[4] es 1 
+Hilo 2 completó la verificación de su rango de nodos.
+visited[5] es 1 
+Hilo 2 completó la verificación de su rango de nodos.
+visited[6] es 1 
+Hilo 2 completó la verificación de su rango de nodos.
+visited[7] es 1 
+Hilo 2 completó la verificación de su rango de nodos.
+visited[8] es 1 
+Hilo 2 completó la verificación de su rango de nodos.
+visited[9] es 1 
+Hilo 2 completó la verificación de su rango de nodos.
+visited[10] es 1 
+Hilo 2 completó la verificación de su rango de nodos.
+visited[11] es 1 
+Hilo 2 completó la verificación de su rango de nodos.
+visited[12] es 1 
+Hilo 2 completó la verificación de su rango de nodos.
+visited[13] es 1 
+Hilo 2 completó la verificación de su rango de nodos.
+visited[14] es 1 
+Hilo 2 completó la verificación de su rango de nodos.
+visited[15] es 1 
+Hilo 2 completó la verificación de su rango de nodos.
+visited[16] es 1 
+Hilo 2 completó la verificación de su rango de nodos.
+visited[17] es 1 
+Hilo 2 completó la verificación de su rango de nodos.
+visited[18] es 1 
+Hilo 2 completó la verificación de su rango de nodos.
+visited[19] es 1 
+Hilo 2 completó la verificación de su rango de nodos.
+visited[20] es 1 
+Hilo 2 completó la verificación de su rango de nodos.
+Stack libre 
+v es 7 
+Hilo 2: Estado actual de la pila: 7 
+vertex es 7 
+visited[0] es 1 
+Hilo 2 completó la verificación de su rango de nodos.
+visited[1] es 1 
+Hilo 2 completó la verificación de su rango de nodos.
+visited[2] es 1 
+Hilo 2 completó la verificación de su rango de nodos.
+visited[3] es 1 
+Hilo 2 completó la verificación de su rango de nodos.
+visited[4] es 1 
+Hilo 2 completó la verificación de su rango de nodos.
+visited[5] es 1 
+Hilo 2 completó la verificación de su rango de nodos.
+visited[6] es 1 
+Hilo 2 completó la verificación de su rango de nodos.
+visited[7] es 1 
+Hilo 2 completó la verificación de su rango de nodos.
+visited[8] es 1 
+Hilo 2 completó la verificación de su rango de nodos.
+visited[9] es 1 
+Hilo 2 completó la verificación de su rango de nodos.
+visited[10] es 1 
+Hilo 2 completó la verificación de su rango de nodos.
+visited[11] es 1 
+Hilo 2 completó la verificación de su rango de nodos.
+visited[12] es 1 
+Hilo 2 completó la verificación de su rango de nodos.
+visited[13] es 1 
+Hilo 2 completó la verificación de su rango de nodos.
+visited[14] es 1 
+Hilo 2 completó la verificación de su rango de nodos.
+visited[15] es 1 
+Hilo 2 completó la verificación de su rango de nodos.
+visited[16] es 1 
+Hilo 2 completó la verificación de su rango de nodos.
+visited[17] es 1 
+Hilo 2 completó la verificación de su rango de nodos.
+visited[18] es 1 
+Hilo 2 completó la verificación de su rango de nodos.
+visited[19] es 1 
+Hilo 2 completó la verificación de su rango de nodos.
+visited[20] es 1 
+Hilo 2 completó la verificación de su rango de nodos.
+Stack libre 
+v es 8 
+Hilo 2: Estado actual de la pila: 8 
+vertex es 8 
+visited[0] es 1 
+Hilo 2 completó la verificación de su rango de nodos.
+visited[1] es 1 
+Hilo 2 completó la verificación de su rango de nodos.
+visited[2] es 1 
+Hilo 2 completó la verificación de su rango de nodos.
+visited[3] es 1 
+Hilo 2 completó la verificación de su rango de nodos.
+visited[4] es 1 
+Hilo 2 completó la verificación de su rango de nodos.
+visited[5] es 1 
+Hilo 2 completó la verificación de su rango de nodos.
+visited[6] es 1 
+Hilo 2 completó la verificación de su rango de nodos.
+visited[7] es 1 
+Hilo 2 completó la verificación de su rango de nodos.
+visited[8] es 1 
+Hilo 2 completó la verificación de su rango de nodos.
+visited[9] es 1 
+Hilo 2 completó la verificación de su rango de nodos.
+visited[10] es 1 
+Hilo 2 completó la verificación de su rango de nodos.
+visited[11] es 1 
+Hilo 2 completó la verificación de su rango de nodos.
+visited[12] es 1 
+Hilo 2 completó la verificación de su rango de nodos.
+visited[13] es 1 
+Hilo 2 completó la verificación de su rango de nodos.
+visited[14] es 1 
+Hilo 2 completó la verificación de su rango de nodos.
+visited[15] es 1 
+Hilo 2 completó la verificación de su rango de nodos.
+visited[16] es 1 
+Hilo 2 completó la verificación de su rango de nodos.
+visited[17] es 1 
+Hilo 2 completó la verificación de su rango de nodos.
+visited[18] es 1 
+Hilo 2 completó la verificación de su rango de nodos.
+visited[19] es 1 
+Hilo 2 completó la verificación de su rango de nodos.
+visited[20] es 1 
+Hilo 2 completó la verificación de su rango de nodos.
+Stack libre 
+v es 9 
+Hilo 2: Estado actual de la pila: 9 
+vertex es 9 
+visited[0] es 1 
+Hilo 2 completó la verificación de su rango de nodos.
+visited[1] es 1 
+Hilo 2 completó la verificación de su rango de nodos.
+visited[2] es 1 
+Hilo 2 completó la verificación de su rango de nodos.
+visited[3] es 1 
+Hilo 2 completó la verificación de su rango de nodos.
+visited[4] es 1 
+Hilo 2 completó la verificación de su rango de nodos.
+visited[5] es 1 
+Hilo 2 completó la verificación de su rango de nodos.
+visited[6] es 1 
+Hilo 2 completó la verificación de su rango de nodos.
+visited[7] es 1 
+Hilo 2 completó la verificación de su rango de nodos.
+visited[8] es 1 
+Hilo 2 completó la verificación de su rango de nodos.
+visited[9] es 1 
+Hilo 2 completó la verificación de su rango de nodos.
+visited[10] es 1 
+Hilo 2 completó la verificación de su rango de nodos.
+visited[11] es 1 
+Hilo 2 completó la verificación de su rango de nodos.
+visited[12] es 1 
+Hilo 2 completó la verificación de su rango de nodos.
+visited[13] es 1 
+Hilo 2 completó la verificación de su rango de nodos.
+visited[14] es 1 
+Hilo 2 completó la verificación de su rango de nodos.
+visited[15] es 1 
+Hilo 2 completó la verificación de su rango de nodos.
+visited[16] es 1 
+Hilo 2 completó la verificación de su rango de nodos.
+visited[17] es 1 
+Hilo 2 completó la verificación de su rango de nodos.
+visited[18] es 1 
+Hilo 2 completó la verificación de su rango de nodos.
+visited[19] es 1 
+Hilo 2 completó la verificación de su rango de nodos.
+visited[20] es 1 
+Hilo 2 completó la verificación de su rango de nodos.
+Stack libre 
+Hilo 2 completó la verificación de su rango de nodos.
+Creando hilo 3 para verificar nodos desde 10 hasta 14
+Hilo 3 iniciando verificación desde nodo 10 hasta 14
+v es 10 
+Hilo 3: Estado actual de la pila: 10 
+vertex es 10 
+Hilo 3 visitando nodo 10
+Hilo 3: Estado actual de la pila: 2 
+visited[2] es 0 
+Hilo 3: Nodo 10 conectado a nodo 2, añadiendo a la pila
+vertex es 2 
+Hilo 3 visitando nodo 2
+Hilo 3: Estado actual de la pila: 5 
+visited[5] es 0 
+Hilo 3: Nodo 2 conectado a nodo 5, añadiendo a la pila
+Hilo 3: Estado actual de la pila: 5 6 
+visited[6] es 0 
+Hilo 3: Nodo 2 conectado a nodo 6, añadiendo a la pila
+vertex es 6 
+Hilo 3 visitando nodo 6
+Hilo 3: Estado actual de la pila: 5 11 
+visited[11] es 0 
+Hilo 3: Nodo 6 conectado a nodo 11, añadiendo a la pila
+Hilo 3: Estado actual de la pila: 5 11 12 
+visited[12] es 0 
+Hilo 3: Nodo 6 conectado a nodo 12, añadiendo a la pila
+Hilo 3: Estado actual de la pila: 5 11 12 13 
+visited[13] es 0 
+Hilo 3: Nodo 6 conectado a nodo 13, añadiendo a la pila
+vertex es 13 
+Hilo 3 visitando nodo 13
+Hilo 3: Estado actual de la pila: 5 11 12 0 
+visited[0] es 0 
+Hilo 3: Nodo 13 conectado a nodo 0, añadiendo a la pila
+Hilo 3: Estado actual de la pila: 5 11 12 0 14 
+visited[14] es 0 
+Hilo 3: Nodo 13 conectado a nodo 14, añadiendo a la pila
+vertex es 14 
+Hilo 3 visitando nodo 14
+Hilo 3: Estado actual de la pila: 5 11 12 0 3 
+visited[3] es 0 
+Hilo 3: Nodo 14 conectado a nodo 3, añadiendo a la pila
+Hilo 3: Estado actual de la pila: 5 11 12 0 3 18 
+visited[18] es 0 
+Hilo 3: Nodo 14 conectado a nodo 18, añadiendo a la pila
+vertex es 18 
+Hilo 3 visitando nodo 18
+vertex es 3 
+Hilo 3 visitando nodo 3
+Hilo 3: Estado actual de la pila: 5 11 12 0 4 
+visited[4] es 0 
+Hilo 3: Nodo 3 conectado a nodo 4, añadiendo a la pila
+Hilo 3: Estado actual de la pila: 5 11 12 0 4 5 
+visited[5] es 0 
+Hilo 3: Nodo 3 conectado a nodo 5, añadiendo a la pila
+Hilo 3: Estado actual de la pila: 5 11 12 0 4 5 7 
+visited[7] es 0 
+Hilo 3: Nodo 3 conectado a nodo 7, añadiendo a la pila
+vertex es 7 
+Hilo 3 visitando nodo 7
+Hilo 3: Estado actual de la pila: 5 11 12 0 4 5 9 
+visited[9] es 0 
+Hilo 3: Nodo 7 conectado a nodo 9, añadiendo a la pila
+Hilo 3: Estado actual de la pila: 5 11 12 0 4 5 9 12 
+visited[12] es 0 
+Hilo 3: Nodo 7 conectado a nodo 12, añadiendo a la pila
+vertex es 12 
+Hilo 3 visitando nodo 12
+Hilo 3: Estado actual de la pila: 5 11 12 0 4 5 9 0 
+visited[0] es 0 
+Hilo 3: Nodo 12 conectado a nodo 0, añadiendo a la pila
+Hilo 3: Estado actual de la pila: 5 11 12 0 4 5 9 0 16 
+visited[16] es 0 
+Hilo 3: Nodo 12 conectado a nodo 16, añadiendo a la pila
+vertex es 16 
+Hilo 3 visitando nodo 16
+Hilo 3: Estado actual de la pila: 5 11 12 0 4 5 9 0 20 
+visited[20] es 0 
+Hilo 3: Nodo 16 conectado a nodo 20, añadiendo a la pila
+vertex es 20 
+Hilo 3 visitando nodo 20
+vertex es 0 
+Hilo 3 visitando nodo 0
+Hilo 3: Estado actual de la pila: 5 11 12 0 4 5 9 1 
+visited[1] es 0 
+Hilo 3: Nodo 0 conectado a nodo 1, añadiendo a la pila
+vertex es 1 
+Hilo 3 visitando nodo 1
+Hilo 3: Estado actual de la pila: 5 11 12 0 4 5 9 4 
+visited[4] es 0 
+Hilo 3: Nodo 1 conectado a nodo 4, añadiendo a la pila
+vertex es 4 
+Hilo 3 visitando nodo 4
+Hilo 3: Estado actual de la pila: 5 11 12 0 4 5 9 8 
+visited[8] es 0 
+Hilo 3: Nodo 4 conectado a nodo 8, añadiendo a la pila
+Hilo 3: Estado actual de la pila: 5 11 12 0 4 5 9 8 9 
+visited[9] es 0 
+Hilo 3: Nodo 4 conectado a nodo 9, añadiendo a la pila
+vertex es 9 
+Hilo 3 visitando nodo 9
+vertex es 8 
+Hilo 3 visitando nodo 8
+Hilo 3: Estado actual de la pila: 5 11 12 0 4 5 9 15 
+visited[15] es 0 
+Hilo 3: Nodo 8 conectado a nodo 15, añadiendo a la pila
+vertex es 15 
+Hilo 3 visitando nodo 15
+Hilo 3: Estado actual de la pila: 5 11 12 0 4 5 9 19 
+visited[19] es 0 
+Hilo 3: Nodo 15 conectado a nodo 19, añadiendo a la pila
+vertex es 19 
+Hilo 3 visitando nodo 19
+vertex es 9 
+vertex es 5 
+Hilo 3 visitando nodo 5
+vertex es 4 
+vertex es 0 
+vertex es 12 
+vertex es 11 
+Hilo 3 visitando nodo 11
+Hilo 3: Estado actual de la pila: 5 17 
+visited[17] es 0 
+Hilo 3: Nodo 11 conectado a nodo 17, añadiendo a la pila
+vertex es 17 
+Hilo 3 visitando nodo 17
+vertex es 5 
+visited[0] es 1 
+Hilo 3 completó la verificación de su rango de nodos.
+visited[1] es 1 
+Hilo 3 completó la verificación de su rango de nodos.
+visited[2] es 1 
+Hilo 3 completó la verificación de su rango de nodos.
+visited[3] es 1 
+Hilo 3 completó la verificación de su rango de nodos.
+visited[4] es 1 
+Hilo 3 completó la verificación de su rango de nodos.
+visited[5] es 1 
+Hilo 3 completó la verificación de su rango de nodos.
+visited[6] es 1 
+Hilo 3 completó la verificación de su rango de nodos.
+visited[7] es 1 
+Hilo 3 completó la verificación de su rango de nodos.
+visited[8] es 1 
+Hilo 3 completó la verificación de su rango de nodos.
+visited[9] es 1 
+Hilo 3 completó la verificación de su rango de nodos.
+visited[10] es 1 
+Hilo 3 completó la verificación de su rango de nodos.
+visited[11] es 1 
+Hilo 3 completó la verificación de su rango de nodos.
+visited[12] es 1 
+Hilo 3 completó la verificación de su rango de nodos.
+visited[13] es 1 
+Hilo 3 completó la verificación de su rango de nodos.
+visited[14] es 1 
+Hilo 3 completó la verificación de su rango de nodos.
+visited[15] es 1 
+Hilo 3 completó la verificación de su rango de nodos.
+visited[16] es 1 
+Hilo 3 completó la verificación de su rango de nodos.
+visited[17] es 1 
+Hilo 3 completó la verificación de su rango de nodos.
+visited[18] es 1 
+Hilo 3 completó la verificación de su rango de nodos.
+visited[19] es 1 
+Hilo 3 completó la verificación de su rango de nodos.
+visited[20] es 1 
+Hilo 3 completó la verificación de su rango de nodos.
+Stack libre 
+v es 11 
+Hilo 3: Estado actual de la pila: 11 
+vertex es 11 
+visited[0] es 1 
+Hilo 3 completó la verificación de su rango de nodos.
+visited[1] es 1 
+Hilo 3 completó la verificación de su rango de nodos.
+visited[2] es 1 
+Hilo 3 completó la verificación de su rango de nodos.
+visited[3] es 1 
+Hilo 3 completó la verificación de su rango de nodos.
+visited[4] es 1 
+Hilo 3 completó la verificación de su rango de nodos.
+visited[5] es 1 
+Hilo 3 completó la verificación de su rango de nodos.
+visited[6] es 1 
+Hilo 3 completó la verificación de su rango de nodos.
+visited[7] es 1 
+Hilo 3 completó la verificación de su rango de nodos.
+visited[8] es 1 
+Hilo 3 completó la verificación de su rango de nodos.
+visited[9] es 1 
+Hilo 3 completó la verificación de su rango de nodos.
+visited[10] es 1 
+Hilo 3 completó la verificación de su rango de nodos.
+visited[11] es 1 
+Hilo 3 completó la verificación de su rango de nodos.
+visited[12] es 1 
+Hilo 3 completó la verificación de su rango de nodos.
+visited[13] es 1 
+Hilo 3 completó la verificación de su rango de nodos.
+visited[14] es 1 
+Hilo 3 completó la verificación de su rango de nodos.
+visited[15] es 1 
+Hilo 3 completó la verificación de su rango de nodos.
+visited[16] es 1 
+Hilo 3 completó la verificación de su rango de nodos.
+visited[17] es 1 
+Hilo 3 completó la verificación de su rango de nodos.
+visited[18] es 1 
+Hilo 3 completó la verificación de su rango de nodos.
+visited[19] es 1 
+Hilo 3 completó la verificación de su rango de nodos.
+visited[20] es 1 
+Hilo 3 completó la verificación de su rango de nodos.
+Stack libre 
+v es 12 
+Hilo 3: Estado actual de la pila: 12 
+vertex es 12 
+visited[0] es 1 
+Hilo 3 completó la verificación de su rango de nodos.
+visited[1] es 1 
+Hilo 3 completó la verificación de su rango de nodos.
+visited[2] es 1 
+Hilo 3 completó la verificación de su rango de nodos.
+visited[3] es 1 
+Hilo 3 completó la verificación de su rango de nodos.
+visited[4] es 1 
+Hilo 3 completó la verificación de su rango de nodos.
+visited[5] es 1 
+Hilo 3 completó la verificación de su rango de nodos.
+visited[6] es 1 
+Hilo 3 completó la verificación de su rango de nodos.
+visited[7] es 1 
+Hilo 3 completó la verificación de su rango de nodos.
+visited[8] es 1 
+Hilo 3 completó la verificación de su rango de nodos.
+visited[9] es 1 
+Hilo 3 completó la verificación de su rango de nodos.
+visited[10] es 1 
+Hilo 3 completó la verificación de su rango de nodos.
+visited[11] es 1 
+Hilo 3 completó la verificación de su rango de nodos.
+visited[12] es 1 
+Hilo 3 completó la verificación de su rango de nodos.
+visited[13] es 1 
+Hilo 3 completó la verificación de su rango de nodos.
+visited[14] es 1 
+Hilo 3 completó la verificación de su rango de nodos.
+visited[15] es 1 
+Hilo 3 completó la verificación de su rango de nodos.
+visited[16] es 1 
+Hilo 3 completó la verificación de su rango de nodos.
+visited[17] es 1 
+Hilo 3 completó la verificación de su rango de nodos.
+visited[18] es 1 
+Hilo 3 completó la verificación de su rango de nodos.
+visited[19] es 1 
+Hilo 3 completó la verificación de su rango de nodos.
+visited[20] es 1 
+Hilo 3 completó la verificación de su rango de nodos.
+Stack libre 
+v es 13 
+Hilo 3: Estado actual de la pila: 13 
+vertex es 13 
+visited[0] es 1 
+Hilo 3 completó la verificación de su rango de nodos.
+visited[1] es 1 
+Hilo 3 completó la verificación de su rango de nodos.
+visited[2] es 1 
+Hilo 3 completó la verificación de su rango de nodos.
+visited[3] es 1 
+Hilo 3 completó la verificación de su rango de nodos.
+visited[4] es 1 
+Hilo 3 completó la verificación de su rango de nodos.
+visited[5] es 1 
+Hilo 3 completó la verificación de su rango de nodos.
+visited[6] es 1 
+Hilo 3 completó la verificación de su rango de nodos.
+visited[7] es 1 
+Hilo 3 completó la verificación de su rango de nodos.
+visited[8] es 1 
+Hilo 3 completó la verificación de su rango de nodos.
+visited[9] es 1 
+Hilo 3 completó la verificación de su rango de nodos.
+visited[10] es 1 
+Hilo 3 completó la verificación de su rango de nodos.
+visited[11] es 1 
+Hilo 3 completó la verificación de su rango de nodos.
+visited[12] es 1 
+Hilo 3 completó la verificación de su rango de nodos.
+visited[13] es 1 
+Hilo 3 completó la verificación de su rango de nodos.
+visited[14] es 1 
+Hilo 3 completó la verificación de su rango de nodos.
+visited[15] es 1 
+Hilo 3 completó la verificación de su rango de nodos.
+visited[16] es 1 
+Hilo 3 completó la verificación de su rango de nodos.
+visited[17] es 1 
+Hilo 3 completó la verificación de su rango de nodos.
+visited[18] es 1 
+Hilo 3 completó la verificación de su rango de nodos.
+visited[19] es 1 
+Hilo 3 completó la verificación de su rango de nodos.
+visited[20] es 1 
+Hilo 3 completó la verificación de su rango de nodos.
+Stack libre 
+v es 14 
+Hilo 3: Estado actual de la pila: 14 
+vertex es 14 
+visited[0] es 1 
+Hilo 3 completó la verificación de su rango de nodos.
+visited[1] es 1 
+Hilo 3 completó la verificación de su rango de nodos.
+visited[2] es 1 
+Hilo 3 completó la verificación de su rango de nodos.
+visited[3] es 1 
+Hilo 3 completó la verificación de su rango de nodos.
+visited[4] es 1 
+Hilo 3 completó la verificación de su rango de nodos.
+visited[5] es 1 
+Hilo 3 completó la verificación de su rango de nodos.
+visited[6] es 1 
+Hilo 3 completó la verificación de su rango de nodos.
+visited[7] es 1 
+Hilo 3 completó la verificación de su rango de nodos.
+visited[8] es 1 
+Hilo 3 completó la verificación de su rango de nodos.
+visited[9] es 1 
+Hilo 3 completó la verificación de su rango de nodos.
+visited[10] es 1 
+Hilo 3 completó la verificación de su rango de nodos.
+visited[11] es 1 
+Hilo 3 completó la verificación de su rango de nodos.
+visited[12] es 1 
+Hilo 3 completó la verificación de su rango de nodos.
+visited[13] es 1 
+Hilo 3 completó la verificación de su rango de nodos.
+visited[14] es 1 
+Hilo 3 completó la verificación de su rango de nodos.
+visited[15] es 1 
+Hilo 3 completó la verificación de su rango de nodos.
+visited[16] es 1 
+Hilo 3 completó la verificación de su rango de nodos.
+visited[17] es 1 
+Hilo 3 completó la verificación de su rango de nodos.
+visited[18] es 1 
+Hilo 3 completó la verificación de su rango de nodos.
+visited[19] es 1 
+Hilo 3 completó la verificación de su rango de nodos.
+visited[20] es 1 
+Hilo 3 completó la verificación de su rango de nodos.
+Stack libre 
+Hilo 3 completó la verificación de su rango de nodos.
+Creando hilo 4 para verificar nodos desde 15 hasta 20
+Hilo 4 iniciando verificación desde nodo 15 hasta 20
+v es 15 
+Hilo 4: Estado actual de la pila: 15 
+vertex es 15 
+Hilo 4 visitando nodo 15
+Hilo 4: Estado actual de la pila: 18 
+visited[18] es 0 
+Hilo 4: Nodo 15 conectado a nodo 18, añadiendo a la pila
+Hilo 4: Estado actual de la pila: 18 19 
+visited[19] es 0 
+Hilo 4: Nodo 15 conectado a nodo 19, añadiendo a la pila
+Hilo 4: Estado actual de la pila: 18 19 20 
+visited[20] es 0 
+Hilo 4: Nodo 15 conectado a nodo 20, añadiendo a la pila
+vertex es 20 
+Hilo 4 visitando nodo 20
+Hilo 4: Estado actual de la pila: 18 19 7 
+visited[7] es 0 
+Hilo 4: Nodo 20 conectado a nodo 7, añadiendo a la pila
+Hilo 4: Estado actual de la pila: 18 19 7 13 
+visited[13] es 0 
+Hilo 4: Nodo 20 conectado a nodo 13, añadiendo a la pila
+vertex es 13 
+Hilo 4 visitando nodo 13
+Hilo 4: Estado actual de la pila: 18 19 7 0 
+visited[0] es 0 
+Hilo 4: Nodo 13 conectado a nodo 0, añadiendo a la pila
+Hilo 4: Estado actual de la pila: 18 19 7 0 14 
+visited[14] es 0 
+Hilo 4: Nodo 13 conectado a nodo 14, añadiendo a la pila
+vertex es 14 
+Hilo 4 visitando nodo 14
+Hilo 4: Estado actual de la pila: 18 19 7 0 3 
+visited[3] es 0 
+Hilo 4: Nodo 14 conectado a nodo 3, añadiendo a la pila
+Hilo 4: Estado actual de la pila: 18 19 7 0 3 18 
+visited[18] es 0 
+Hilo 4: Nodo 14 conectado a nodo 18, añadiendo a la pila
+vertex es 18 
+Hilo 4 visitando nodo 18
+vertex es 3 
+Hilo 4 visitando nodo 3
+Hilo 4: Estado actual de la pila: 18 19 7 0 4 
+visited[4] es 0 
+Hilo 4: Nodo 3 conectado a nodo 4, añadiendo a la pila
+Hilo 4: Estado actual de la pila: 18 19 7 0 4 5 
+visited[5] es 0 
+Hilo 4: Nodo 3 conectado a nodo 5, añadiendo a la pila
+Hilo 4: Estado actual de la pila: 18 19 7 0 4 5 7 
+visited[7] es 0 
+Hilo 4: Nodo 3 conectado a nodo 7, añadiendo a la pila
+vertex es 7 
+Hilo 4 visitando nodo 7
+Hilo 4: Estado actual de la pila: 18 19 7 0 4 5 9 
+visited[9] es 0 
+Hilo 4: Nodo 7 conectado a nodo 9, añadiendo a la pila
+Hilo 4: Estado actual de la pila: 18 19 7 0 4 5 9 12 
+visited[12] es 0 
+Hilo 4: Nodo 7 conectado a nodo 12, añadiendo a la pila
+vertex es 12 
+Hilo 4 visitando nodo 12
+Hilo 4: Estado actual de la pila: 18 19 7 0 4 5 9 0 
+visited[0] es 0 
+Hilo 4: Nodo 12 conectado a nodo 0, añadiendo a la pila
+Hilo 4: Estado actual de la pila: 18 19 7 0 4 5 9 0 16 
+visited[16] es 0 
+Hilo 4: Nodo 12 conectado a nodo 16, añadiendo a la pila
+vertex es 16 
+Hilo 4 visitando nodo 16
+vertex es 0 
+Hilo 4 visitando nodo 0
+Hilo 4: Estado actual de la pila: 18 19 7 0 4 5 9 1 
+visited[1] es 0 
+Hilo 4: Nodo 0 conectado a nodo 1, añadiendo a la pila
+Hilo 4: Estado actual de la pila: 18 19 7 0 4 5 9 1 2 
+visited[2] es 0 
+Hilo 4: Nodo 0 conectado a nodo 2, añadiendo a la pila
+vertex es 2 
+Hilo 4 visitando nodo 2
+Hilo 4: Estado actual de la pila: 18 19 7 0 4 5 9 1 5 
+visited[5] es 0 
+Hilo 4: Nodo 2 conectado a nodo 5, añadiendo a la pila
+Hilo 4: Estado actual de la pila: 18 19 7 0 4 5 9 1 5 6 
+visited[6] es 0 
+Hilo 4: Nodo 2 conectado a nodo 6, añadiendo a la pila
+vertex es 6 
+Hilo 4 visitando nodo 6
+Hilo 4: Estado actual de la pila: 18 19 7 0 4 5 9 1 5 11 
+visited[11] es 0 
+Hilo 4: Nodo 6 conectado a nodo 11, añadiendo a la pila
+vertex es 11 
+Hilo 4 visitando nodo 11
+Hilo 4: Estado actual de la pila: 18 19 7 0 4 5 9 1 5 17 
+visited[17] es 0 
+Hilo 4: Nodo 11 conectado a nodo 17, añadiendo a la pila
+vertex es 17 
+Hilo 4 visitando nodo 17
+vertex es 5 
+Hilo 4 visitando nodo 5
+Hilo 4: Estado actual de la pila: 18 19 7 0 4 5 9 1 10 
+visited[10] es 0 
+Hilo 4: Nodo 5 conectado a nodo 10, añadiendo a la pila
+vertex es 10 
+Hilo 4 visitando nodo 10
+vertex es 1 
+Hilo 4 visitando nodo 1
+Hilo 4: Estado actual de la pila: 18 19 7 0 4 5 9 4 
+visited[4] es 0 
+Hilo 4: Nodo 1 conectado a nodo 4, añadiendo a la pila
+vertex es 4 
+Hilo 4 visitando nodo 4
+Hilo 4: Estado actual de la pila: 18 19 7 0 4 5 9 8 
+visited[8] es 0 
+Hilo 4: Nodo 4 conectado a nodo 8, añadiendo a la pila
+Hilo 4: Estado actual de la pila: 18 19 7 0 4 5 9 8 9 
+visited[9] es 0 
+Hilo 4: Nodo 4 conectado a nodo 9, añadiendo a la pila
+vertex es 9 
+Hilo 4 visitando nodo 9
+vertex es 8 
+Hilo 4 visitando nodo 8
+vertex es 9 
+vertex es 5 
+vertex es 4 
+vertex es 0 
+vertex es 7 
+vertex es 19 
+Hilo 4 visitando nodo 19
+vertex es 18 
+visited[0] es 1 
+Hilo 4 completó la verificación de su rango de nodos.
+visited[1] es 1 
+Hilo 4 completó la verificación de su rango de nodos.
+visited[2] es 1 
+Hilo 4 completó la verificación de su rango de nodos.
+visited[3] es 1 
+Hilo 4 completó la verificación de su rango de nodos.
+visited[4] es 1 
+Hilo 4 completó la verificación de su rango de nodos.
+visited[5] es 1 
+Hilo 4 completó la verificación de su rango de nodos.
+visited[6] es 1 
+Hilo 4 completó la verificación de su rango de nodos.
+visited[7] es 1 
+Hilo 4 completó la verificación de su rango de nodos.
+visited[8] es 1 
+Hilo 4 completó la verificación de su rango de nodos.
+visited[9] es 1 
+Hilo 4 completó la verificación de su rango de nodos.
+visited[10] es 1 
+Hilo 4 completó la verificación de su rango de nodos.
+visited[11] es 1 
+Hilo 4 completó la verificación de su rango de nodos.
+visited[12] es 1 
+Hilo 4 completó la verificación de su rango de nodos.
+visited[13] es 1 
+Hilo 4 completó la verificación de su rango de nodos.
+visited[14] es 1 
+Hilo 4 completó la verificación de su rango de nodos.
+visited[15] es 1 
+Hilo 4 completó la verificación de su rango de nodos.
+visited[16] es 1 
+Hilo 4 completó la verificación de su rango de nodos.
+visited[17] es 1 
+Hilo 4 completó la verificación de su rango de nodos.
+visited[18] es 1 
+Hilo 4 completó la verificación de su rango de nodos.
+visited[19] es 1 
+Hilo 4 completó la verificación de su rango de nodos.
+visited[20] es 1 
+Hilo 4 completó la verificación de su rango de nodos.
+Stack libre 
+v es 16 
+Hilo 4: Estado actual de la pila: 16 
+vertex es 16 
+visited[0] es 1 
+Hilo 4 completó la verificación de su rango de nodos.
+visited[1] es 1 
+Hilo 4 completó la verificación de su rango de nodos.
+visited[2] es 1 
+Hilo 4 completó la verificación de su rango de nodos.
+visited[3] es 1 
+Hilo 4 completó la verificación de su rango de nodos.
+visited[4] es 1 
+Hilo 4 completó la verificación de su rango de nodos.
+visited[5] es 1 
+Hilo 4 completó la verificación de su rango de nodos.
+visited[6] es 1 
+Hilo 4 completó la verificación de su rango de nodos.
+visited[7] es 1 
+Hilo 4 completó la verificación de su rango de nodos.
+visited[8] es 1 
+Hilo 4 completó la verificación de su rango de nodos.
+visited[9] es 1 
+Hilo 4 completó la verificación de su rango de nodos.
+visited[10] es 1 
+Hilo 4 completó la verificación de su rango de nodos.
+visited[11] es 1 
+Hilo 4 completó la verificación de su rango de nodos.
+visited[12] es 1 
+Hilo 4 completó la verificación de su rango de nodos.
+visited[13] es 1 
+Hilo 4 completó la verificación de su rango de nodos.
+visited[14] es 1 
+Hilo 4 completó la verificación de su rango de nodos.
+visited[15] es 1 
+Hilo 4 completó la verificación de su rango de nodos.
+visited[16] es 1 
+Hilo 4 completó la verificación de su rango de nodos.
+visited[17] es 1 
+Hilo 4 completó la verificación de su rango de nodos.
+visited[18] es 1 
+Hilo 4 completó la verificación de su rango de nodos.
+visited[19] es 1 
+Hilo 4 completó la verificación de su rango de nodos.
+visited[20] es 1 
+Hilo 4 completó la verificación de su rango de nodos.
+Stack libre 
+v es 17 
+Hilo 4: Estado actual de la pila: 17 
+vertex es 17 
+visited[0] es 1 
+Hilo 4 completó la verificación de su rango de nodos.
+visited[1] es 1 
+Hilo 4 completó la verificación de su rango de nodos.
+visited[2] es 1 
+Hilo 4 completó la verificación de su rango de nodos.
+visited[3] es 1 
+Hilo 4 completó la verificación de su rango de nodos.
+visited[4] es 1 
+Hilo 4 completó la verificación de su rango de nodos.
+visited[5] es 1 
+Hilo 4 completó la verificación de su rango de nodos.
+visited[6] es 1 
+Hilo 4 completó la verificación de su rango de nodos.
+visited[7] es 1 
+Hilo 4 completó la verificación de su rango de nodos.
+visited[8] es 1 
+Hilo 4 completó la verificación de su rango de nodos.
+visited[9] es 1 
+Hilo 4 completó la verificación de su rango de nodos.
+visited[10] es 1 
+Hilo 4 completó la verificación de su rango de nodos.
+visited[11] es 1 
+Hilo 4 completó la verificación de su rango de nodos.
+visited[12] es 1 
+Hilo 4 completó la verificación de su rango de nodos.
+visited[13] es 1 
+Hilo 4 completó la verificación de su rango de nodos.
+visited[14] es 1 
+Hilo 4 completó la verificación de su rango de nodos.
+visited[15] es 1 
+Hilo 4 completó la verificación de su rango de nodos.
+visited[16] es 1 
+Hilo 4 completó la verificación de su rango de nodos.
+visited[17] es 1 
+Hilo 4 completó la verificación de su rango de nodos.
+visited[18] es 1 
+Hilo 4 completó la verificación de su rango de nodos.
+visited[19] es 1 
+Hilo 4 completó la verificación de su rango de nodos.
+visited[20] es 1 
+Hilo 4 completó la verificación de su rango de nodos.
+Stack libre 
+v es 18 
+Hilo 4: Estado actual de la pila: 18 
+vertex es 18 
+visited[0] es 1 
+Hilo 4 completó la verificación de su rango de nodos.
+visited[1] es 1 
+Hilo 4 completó la verificación de su rango de nodos.
+visited[2] es 1 
+Hilo 4 completó la verificación de su rango de nodos.
+visited[3] es 1 
+Hilo 4 completó la verificación de su rango de nodos.
+visited[4] es 1 
+Hilo 4 completó la verificación de su rango de nodos.
+visited[5] es 1 
+Hilo 4 completó la verificación de su rango de nodos.
+visited[6] es 1 
+Hilo 4 completó la verificación de su rango de nodos.
+visited[7] es 1 
+Hilo 4 completó la verificación de su rango de nodos.
+visited[8] es 1 
+Hilo 4 completó la verificación de su rango de nodos.
+visited[9] es 1 
+Hilo 4 completó la verificación de su rango de nodos.
+visited[10] es 1 
+Hilo 4 completó la verificación de su rango de nodos.
+visited[11] es 1 
+Hilo 4 completó la verificación de su rango de nodos.
+visited[12] es 1 
+Hilo 4 completó la verificación de su rango de nodos.
+visited[13] es 1 
+Hilo 4 completó la verificación de su rango de nodos.
+visited[14] es 1 
+Hilo 4 completó la verificación de su rango de nodos.
+visited[15] es 1 
+Hilo 4 completó la verificación de su rango de nodos.
+visited[16] es 1 
+Hilo 4 completó la verificación de su rango de nodos.
+visited[17] es 1 
+Hilo 4 completó la verificación de su rango de nodos.
+visited[18] es 1 
+Hilo 4 completó la verificación de su rango de nodos.
+visited[19] es 1 
+Hilo 4 completó la verificación de su rango de nodos.
+visited[20] es 1 
+Hilo 4 completó la verificación de su rango de nodos.
+Stack libre 
+v es 19 
+Hilo 4: Estado actual de la pila: 19 
+vertex es 19 
+visited[0] es 1 
+Hilo 4 completó la verificación de su rango de nodos.
+visited[1] es 1 
+Hilo 4 completó la verificación de su rango de nodos.
+visited[2] es 1 
+Hilo 4 completó la verificación de su rango de nodos.
+visited[3] es 1 
+Hilo 4 completó la verificación de su rango de nodos.
+visited[4] es 1 
+Hilo 4 completó la verificación de su rango de nodos.
+visited[5] es 1 
+Hilo 4 completó la verificación de su rango de nodos.
+visited[6] es 1 
+Hilo 4 completó la verificación de su rango de nodos.
+visited[7] es 1 
+Hilo 4 completó la verificación de su rango de nodos.
+visited[8] es 1 
+Hilo 4 completó la verificación de su rango de nodos.
+visited[9] es 1 
+Hilo 4 completó la verificación de su rango de nodos.
+visited[10] es 1 
+Hilo 4 completó la verificación de su rango de nodos.
+visited[11] es 1 
+Hilo 4 completó la verificación de su rango de nodos.
+visited[12] es 1 
+Hilo 4 completó la verificación de su rango de nodos.
+visited[13] es 1 
+Hilo 4 completó la verificación de su rango de nodos.
+visited[14] es 1 
+Hilo 4 completó la verificación de su rango de nodos.
+visited[15] es 1 
+Hilo 4 completó la verificación de su rango de nodos.
+visited[16] es 1 
+Hilo 4 completó la verificación de su rango de nodos.
+visited[17] es 1 
+Hilo 4 completó la verificación de su rango de nodos.
+visited[18] es 1 
+Hilo 4 completó la verificación de su rango de nodos.
+visited[19] es 1 
+Hilo 4 completó la verificación de su rango de nodos.
+visited[20] es 1 
+Hilo 4 completó la verificación de su rango de nodos.
+Stack libre 
+v es 20 
+Hilo 4: Estado actual de la pila: 20 
+vertex es 20 
+visited[0] es 1 
+Hilo 4 completó la verificación de su rango de nodos.
+visited[1] es 1 
+Hilo 4 completó la verificación de su rango de nodos.
+visited[2] es 1 
+Hilo 4 completó la verificación de su rango de nodos.
+visited[3] es 1 
+Hilo 4 completó la verificación de su rango de nodos.
+visited[4] es 1 
+Hilo 4 completó la verificación de su rango de nodos.
+visited[5] es 1 
+Hilo 4 completó la verificación de su rango de nodos.
+visited[6] es 1 
+Hilo 4 completó la verificación de su rango de nodos.
+visited[7] es 1 
+Hilo 4 completó la verificación de su rango de nodos.
+visited[8] es 1 
+Hilo 4 completó la verificación de su rango de nodos.
+visited[9] es 1 
+Hilo 4 completó la verificación de su rango de nodos.
+visited[10] es 1 
+Hilo 4 completó la verificación de su rango de nodos.
+visited[11] es 1 
+Hilo 4 completó la verificación de su rango de nodos.
+visited[12] es 1 
+Hilo 4 completó la verificación de su rango de nodos.
+visited[13] es 1 
+Hilo 4 completó la verificación de su rango de nodos.
+visited[14] es 1 
+Hilo 4 completó la verificación de su rango de nodos.
+visited[15] es 1 
+Hilo 4 completó la verificación de su rango de nodos.
+visited[16] es 1 
+Hilo 4 completó la verificación de su rango de nodos.
+visited[17] es 1 
+Hilo 4 completó la verificación de su rango de nodos.
+visited[18] es 1 
+Hilo 4 completó la verificación de su rango de nodos.
+visited[19] es 1 
+Hilo 4 completó la verificación de su rango de nodos.
+visited[20] es 1 
+Hilo 4 completó la verificación de su rango de nodos.
+Stack libre 
+Hilo 4 completó la verificación de su rango de nodos.
+1El grafo es fuertemente conectado.
+Verificación de conexidad completada.

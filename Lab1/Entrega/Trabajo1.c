@@ -57,13 +57,21 @@ void* DFS(void* arg) {
         printf("Hilo %d iniciando verificación desde nodo %d hasta %d\n", data->threadId, data->start, data->end - 1);
     }
 
-    for (int v = data->start; v < data->end && isConnectedGlobal==1; v++) {
+    for (int v = data->start; v < data->end && isConnectedGlobal == 1; v++) {
+        printf("v es %d \n",v);
         Stack *stack = createStack(n);
         push(stack, v);
-
-        while (stack->top != -1 && isConnectedGlobal==1) {
+        if (mode == 'V') {
+            printf("Hilo %d: Estado actual de la pila: ", data->threadId);
+            for (int i = 0; i <= stack->top; i++) {
+                printf("%d ", stack->data[i]);
+            }
+            printf("\n");
+        }
+        while (stack->top != -1 && isConnectedGlobal == 1) {
             int vertex = pop(stack);
-            if (!visited[vertex]==1) {
+            printf("vertex es %d \n",vertex);
+            if (visited[vertex] != 1) {
                 visited[vertex] = 1;
 
                 if (mode == 'V') {
@@ -71,23 +79,48 @@ void* DFS(void* arg) {
                 }
 
                 for (int i = 0; i < n; i++) {
-                    if (graph[vertex][i] && !visited[i]==1) {
+                    if (graph[vertex][i] && visited[i] != 1) {
                         push(stack, i);
+                        if (mode == 'V') {
+                            printf("Hilo %d: Estado actual de la pila: ", data->threadId);
+                            for (int j = 0; j <= stack->top; j++) {
+                                printf("%d ", stack->data[j]);
+                                
+                            }
+                            printf("\n");
+                            printf("visited[%d] es %d \n",i,visited[i]);
+                        }
                         if (mode == 'V') {
                             printf("Hilo %d: Nodo %d conectado a nodo %d, añadiendo a la pila\n", data->threadId, vertex, i);
                         }
                     }
                 }
+              
             }
+            
         }
-        
+        for (int i = 0; i < n; i++) {
+            printf("visited[%d] es %d \n",i,visited[i]);
+        if (visited[i] != 1) {
+            isConnectedGlobal = 0;
+            printf("Hilo %d detectó que el nodo %d no es alcanzable. Deteniendo otros hilos.\n", data->threadId, i);
+        }
+           if (mode == 'V') {
+        printf("Hilo %d completó la verificación de su rango de nodos.\n", data->threadId);
+        }
+        }
+        printf("Stack libre \n");
         freeStack(stack);
+        
+
     }
 
     if (mode == 'V') {
         printf("Hilo %d completó la verificación de su rango de nodos.\n", data->threadId);
     }
+
     return NULL;
+    
 }
 
 // Función para verificar si un grafo es fuertemente conectado
