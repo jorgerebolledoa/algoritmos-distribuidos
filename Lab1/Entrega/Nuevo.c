@@ -45,10 +45,9 @@ void freeStack(Stack *stack) {
     free(stack->data);
     free(stack);
 }
-
-// Función DFS paralelizada con control de parada temprana
+/*
 void* DFS(void* arg) {
-  ThreadData* data = (ThreadData*)arg;
+    ThreadData* data = (ThreadData*)arg;
     int **graph = data->graph;
     int n = data->n;
     int* visited = data->visited;
@@ -69,13 +68,10 @@ void* DFS(void* arg) {
             printf("\n");
         }
         while (stack->top != -1 && isConnectedGlobal == 1) {
-            int vertex = pop(&stack);
+            int vertex = pop(stack);
             printf("vertex es %d \n",vertex);
-              printf("Verificacion superior visited[%d] es %d \n",vertex,visited[vertex]);
             if (visited[vertex] != 1) {
                 visited[vertex] = 1;
-                  printf("Verificacion inferior visited[%d] es %d \n",vertex,visited[vertex]);
-               
 
                 if (mode == 'V') {
                     printf("Hilo %d visitando nodo %d\n", data->threadId, vertex);
@@ -100,24 +96,22 @@ void* DFS(void* arg) {
                 }
               
             }
-            printf("visited[%d] es %d \n",vertex,visited[vertex]);
             
         }
         for (int i = 0; i < n; i++) {
             printf("visited[%d] es %d \n",i,visited[i]);
-            if (visited[i] != 1) {
+        if (visited[i] != 1) {
             isConnectedGlobal = 0;
             printf("Hilo %d detectó que el nodo %d no es alcanzable. Deteniendo otros hilos.\n", data->threadId, i);
         }
            if (mode == 'V') {
         printf("Hilo %d completó la verificación de su rango de nodos.\n", data->threadId);
         }
-       
-       
-        
         }
-         printf("Stack libre \n");
-         freeStack(stack);
+        printf("Stack libre \n");
+        freeStack(stack);
+        
+
     }
 
     if (mode == 'V') {
@@ -127,7 +121,6 @@ void* DFS(void* arg) {
     return NULL;
     
 }
-
 
 // Función para verificar si un grafo es fuertemente conectado
 int isStronglyConnected(int **graph, int n) {
@@ -159,14 +152,108 @@ int isStronglyConnected(int **graph, int n) {
 
         pthread_create(&threads[i], NULL, DFS, data);
         pthread_join(threads[i], NULL);
-        free(visited);
-        free(data);
-      
+
+        // Verificar si algún nodo no se alcanzó
+        for (int j = 0; j < n; j++) {
+            if (visited[j] != 1) {
+               isConnectedGlobal = 0;                
+                if (mode == 'V') {
+                    printf("Hilo %d detectó que el nodo %d no es alcanzable. Deteniendo otros hilos.\n", data->threadId, j);
+                }
+                return 0;
+            }
+            
+        }
+
+       free(data);
     }
 
     free(threads);
+    free(visited);
     return 1;
 }
+*/
+void* DFS(void* arg) {
+    ThreadData* data = (ThreadData*)arg;
+    int **graph = data->graph;
+    int n = data->n;
+    int* visited = data->visited;
+
+    if (mode == 'V') {
+        printf("Hilo %d iniciando verificación desde nodo %d hasta %d\n", data->threadId, data->start, data->end - 1);
+    }
+
+    for (int v = data->start; v < data->end && isConnectedGlobal == 1; v++) {
+        printf("v es %d \n",v);
+        Stack *stack = createStack(n);
+        push(stack, v);
+        if (mode == 'V') {
+            printf("Hilo %d: Estado actual de la pila: ", data->threadId);
+            for (int i = 0; i <= stack->top; i++) {
+                printf("%d ", stack->data[i]);
+            }
+            printf("\n");
+        }
+        while (stack->top != -1 && isConnectedGlobal == 1) {
+            int vertex = pop(stack);
+            printf("vertex es %d \n",vertex);
+            if (visited[vertex] != 1) {
+                visited[vertex] = 1;
+
+                if (mode == 'V') {
+                    printf("Hilo %d visitando nodo %d\n", data->threadId, vertex);
+                }
+
+                for (int i = 0; i < n; i++) {
+                    if (graph[vertex][i] && visited[i] != 1) {
+                        push(stack, i);
+                        if (mode == 'V') {
+                            printf("Hilo %d: Estado actual de la pila: ", data->threadId);
+                            for (int j = 0; j <= stack->top; j++) {
+                                printf("%d ", stack->data[j]);
+                                
+                            }
+                            printf("\n");
+                            printf("visited[%d] es %d \n",i,visited[i]);
+                        }
+                        if (mode == 'V') {
+                            printf("Hilo %d: Nodo %d conectado a nodo %d, añadiendo a la pila\n", data->threadId, vertex, i);
+                        }
+                    }
+                }
+              
+            }
+            
+        }
+        for (int i = 0; i < n; i++) {
+            printf("visited[%d] es %d \n",i,visited[i]);
+        if (visited[i] != 1) {
+            isConnectedGlobal = 0;
+            printf("Hilo %d detectó que el nodo %d no es alcanzable. Deteniendo otros hilos.\n", data->threadId, i);
+        }
+           if (mode == 'V') {
+        printf("Hilo %d completó la verificación de su rango de nodos.\n", data->threadId);
+        }
+        }
+        printf("Stack libre \n");
+        freeStack(stack);
+        
+
+    }
+
+    if (mode == 'V') {
+        printf("Hilo %d completó la verificación de su rango de nodos.\n", data->threadId);
+    }
+
+    return NULL;
+    
+}
+
+
+
+
+
+
 
 int main(int argc, char *argv[]) {
     if (argc < 3) {
@@ -203,11 +290,12 @@ int main(int argc, char *argv[]) {
         printf("Iniciando verificación de conexidad con %d hilos\n", numThreads);
     }
 
-    if (isStronglyConnected(graph, n) ==1 && isConnectedGlobal==1) {
-        printf("valor de la variable global %d \n", isConnectedGlobal);
+    if (isStronglyConnected(graph, n) && isConnectedGlobal==1) {
+        printf("%d", isConnectedGlobal);
         printf("El grafo es fuertemente conectado.\n");
     } else {
-        printf("valor de la variable global %d \n", isConnectedGlobal);
+                printf("%d", isConnectedGlobal);
+
         printf("El grafo NO es fuertemente conectado.\n");
     }
 
