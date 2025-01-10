@@ -62,9 +62,11 @@ int main(int argc, char *argv[]) {
         return 1;
     }
 
-    // Parsear argumentos
-    int num_threads = atoi(argv[1]);
-    char mode = argv[2][1];
+    // Argumentos
+    int num_threads ;
+    char mode ;
+    mode = argv[2][1];
+    num_threads = atoi(argv[1]);
 
     // Leer el número de nodos
     unsigned int num_nodes;
@@ -89,18 +91,25 @@ int main(int argc, char *argv[]) {
         }
     }
 
-    unsigned int stop = 0;
+    unsigned int stop;
+    stop = 0;
 
     // Crear hilos
     pthread_t threads[num_threads];
     ThreadData thread_data[num_threads];
 
-    int nodes_per_thread = num_nodes / num_threads;
-    int extra_nodes = num_nodes % num_threads;
-    int start = 0;
+    int nodes_per_thread ;
+    int extra_nodes;
+    int start ;
+    nodes_per_thread = num_nodes / num_threads;
+    extra_nodes = num_nodes % num_threads;
+    start = 0;
 
     for (int i = 0; i < num_threads; i=i+1) {
-        int end = start + nodes_per_thread + (i < extra_nodes ? 1 : 0);
+        int end = start + nodes_per_thread;
+        if (i < extra_nodes) {
+            end = end + 1;
+        }
 
         thread_data[i].thread_id = i;
         thread_data[i].start = start;
