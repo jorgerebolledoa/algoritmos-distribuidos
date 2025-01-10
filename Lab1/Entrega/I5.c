@@ -18,7 +18,7 @@ typedef struct {
 // Función para realizar DFS en un nodo
 void dfs(unsigned int node, unsigned int num_nodes, int **graph, unsigned int *visited) {
     visited[node] = 1;
-    for (unsigned int i = 0; i < num_nodes; i++) {
+    for (unsigned int i = 0; i < num_nodes; i=i+1) {
         if (graph[node][i] && !visited[i]) {
             dfs(i, num_nodes, graph, visited);
         }
@@ -30,24 +30,20 @@ void *check_connectivity(void *arg) {
     ThreadData *data = (ThreadData *)arg;
 
     unsigned int *local_visited = calloc(data->num_nodes, sizeof(unsigned int));
-    if (!local_visited) {
-        perror("Error al asignar memoria");
-        exit(EXIT_FAILURE);
-    }
 
-    for (int i = data->start; i < data->end; i++) {
+    for (int i = data->start; i < data->end; i=i+1) {
         if (*(data->stop)) {
             free(local_visited);
             return NULL;
         }
 
-        for (unsigned int j = 0; j < data->num_nodes; j++) {
+        for (unsigned int j = 0; j < data->num_nodes; j=j+1) {
             local_visited[j] = 0;
         }
 
         dfs(i, data->num_nodes, data->graph, local_visited);
 
-        for (unsigned int j = 0; j < data->num_nodes; j++) {
+        for (unsigned int j = 0; j < data->num_nodes; j=j+1) {
             if (!local_visited[j]) {
                 *(data->stop) = 1;
                 free(local_visited);
@@ -75,27 +71,18 @@ int main(int argc, char *argv[]) {
     scanf("%u", &num_nodes);
 
     // Asignar memoria para el grafo
-    int **graph = malloc(num_nodes * sizeof(int *));
-    if (!graph) {
-        perror("Error al asignar memoria para el grafo");
-        return 1;
-    }
-
-    for (unsigned int i = 0; i < num_nodes; i++) {
-        graph[i] = malloc(num_nodes * sizeof(int));
-        if (!graph[i]) {
-            perror("Error al asignar memoria para las filas del grafo");
-            return 1;
-        }
-        for (unsigned int j = 0; j < num_nodes; j++) {
+    int **graph = calloc(num_nodes, sizeof(int *));
+    for (unsigned int i = 0; i < num_nodes; i=i+1) {
+        graph[i] = calloc(num_nodes, sizeof(int));
+        for (unsigned int j = 0; j < num_nodes; j=j+1) {
             scanf("%d", &graph[i][j]);
         }
     }
 
     if (mode == 'V') {
         printf("El grafo ingresado es:\n");
-        for (unsigned int i = 0; i < num_nodes; i++) {
-            for (unsigned int j = 0; j < num_nodes; j++) {
+        for (unsigned int i = 0; i < num_nodes; i=i+1) {
+            for (unsigned int j = 0; j < num_nodes; j=j+1) {
                 printf("%d ", graph[i][j]);
             }
             printf("\n");
@@ -112,7 +99,7 @@ int main(int argc, char *argv[]) {
     int extra_nodes = num_nodes % num_threads;
     int start = 0;
 
-    for (int i = 0; i < num_threads; i++) {
+    for (int i = 0; i < num_threads; i=i+1) {
         int end = start + nodes_per_thread + (i < extra_nodes ? 1 : 0);
 
         thread_data[i].thread_id = i;
@@ -127,7 +114,7 @@ int main(int argc, char *argv[]) {
         start = end;
     }
 
-    for (int i = 0; i < num_threads; i++) {
+    for (int i = 0; i < num_threads; i=i+1) {
         pthread_join(threads[i], NULL);
     }
 
@@ -138,7 +125,7 @@ int main(int argc, char *argv[]) {
     }
 
     // Liberar memoria
-    for (unsigned int i = 0; i < num_nodes; i++) {
+    for (unsigned int i = 0; i < num_nodes; i=i+1) {
         free(graph[i]);
     }
     free(graph);
