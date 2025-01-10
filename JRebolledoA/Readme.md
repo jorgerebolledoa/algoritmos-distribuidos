@@ -12,7 +12,7 @@ Este programa verifica si un grafo dirigido es fuertemente conectado mediante un
 Para compilar el programa, utiliza el siguiente comando en la terminal:
 
 ```bash
-gcc JorgeRebolledoT1.c -o t1.exe
+gcc JRebolledoAT1.c -o t1.exe
 ```
 ## Ejecución
 Para ejecutar el programa, utiliza el siguiente comando en la terminal:
